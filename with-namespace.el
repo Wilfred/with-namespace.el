@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013 Wilfred Hughes
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
-;; Version: 1.0
+;; Version: 1.1
 ;; Keywords: namespaces
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -43,6 +43,12 @@
 ;;   separator i.e. --)
 ;; * Explore importing from other namespaces (everything, public only, named only)
 
+;;; Changelog
+
+;; 1.1 -- Added support for defmacro, defconst and defstruct, and
+;; allow more to be added by the user
+;; 1.0 -- Initial release
+
 ;;; Similar projects
 
 ;; * https://github.com/skeeto/elisp-fakespace/
@@ -61,6 +67,9 @@ in an (arbitrarily nested) proper LIST."
     ('t it))
    list))
 
+(defvar with-namespace--suported-defs
+  (list 'defun 'defvar 'defmacro 'defconst 'defstruct))
+
 ;; nope, with-namespace isn't written with with-namespace. That'd be insane. There'd
 ;; also be bootstrapping issues.
 (defun with-namespace--get-definitions (definitions)
@@ -68,7 +77,7 @@ in an (arbitrarily nested) proper LIST."
     (loop-for-each definition definitions
       (let ((definition-type (car definition))
             (new-symbol (cadr definition)))
-        (unless (memq definition-type (list 'defun 'defvar))
+        (unless (memq definition-type with-namespace--suported-defs)
           (error "with-namespace doesn't support %s definitions -- file a bug!" (car definition)))
         (add-to-list 'ns-symbols new-symbol)))
     ns-symbols))
