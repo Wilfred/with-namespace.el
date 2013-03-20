@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013 Wilfred Hughes
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
-;; Version: 0.1
+;; Version: 1.0
 ;; Keywords: namespaces
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -35,18 +35,18 @@
 ;; (defun my-project-foo (x) (1+ x))
 ;; (defvar my-project-bar 3 "some docstring")
 
-;; Iterates over all the top level definitions, rewrites them as
-;; my-project-foo, leaving other references as-is.
-
 ;;; Todo
 
-;; * Implement
 ;; * Document
 ;; * Unit test
 ;; * Explore private functions (presumably using a separate namespace
 ;;   separator i.e. --)
-;; * Explore customising the namespace separator (e.g. / instead of -)
-;;   with a buffer-local variable
+;; * Explore importing from other namespaces (everything, public only, named only)
+
+;;; Similar projects
+
+;; * https://github.com/skeeto/elisp-fakespace/
+;; * https://github.com/sigma/codex
 
 (require 'loop)
 (require 'dash)
