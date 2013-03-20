@@ -89,3 +89,6 @@ symbol starts with PREFIX."
         (setq definitions
               (with-namespace--replace-nested-list ns-symbol fully-qualified-symbol definitions))))
     `(progn ,@definitions)))
+
+(provide 'with-namespace)
+;;; with-namespace.el ends here
