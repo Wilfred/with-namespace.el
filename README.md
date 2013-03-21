@@ -20,7 +20,6 @@ Compiles to:
 ### Todo
 
 * Document
-* Unit test
 * Explore customising the namespace separator (e.g. / instead of -)
   with a buffer-local variable
 * Explore importing from other namespaces (everything, public only, named only)
