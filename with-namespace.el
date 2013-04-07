@@ -45,6 +45,13 @@
 ;; `with-namespace' does not require downstream users to even know
 ;; about it.
 
+;; Note that in tracebacks, you will see the compiled function names,
+;; so trying to jump to a definition will give "Unable to find
+;; location in file" within the file. You can work around this by
+;; using macrostep (available on MELPA) to temporarily expand the
+;; `with-statement' form. Whilst expanded, you can jump straight to
+;; the definition.
+
 ;;; Todo
 
 ;; * Document
