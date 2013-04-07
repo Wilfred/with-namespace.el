@@ -94,7 +94,8 @@ in an (arbitrarily nested) proper LIST."
 (defmacro with-namespace (prefix &rest definitions)
   "Rewrite a list DEFINITIONS of defun or defvar sexps so their
 symbol starts with PREFIX."
-  (declare (indent defun))
+  (declare (indent defun)
+           (debug (stringp "prefix" &rest form)))
   (let ((ns-symbols (with-namespace--get-definitions definitions)))
     (loop-for-each ns-symbol ns-symbols
       (let ((fully-qualified-symbol
