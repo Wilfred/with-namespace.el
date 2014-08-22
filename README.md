@@ -40,5 +40,5 @@ allow more to be added by the user
 Similar projects
 ===
 
-* https://github.com/skeeto/elisp-fakespace/
-* https://github.com/sigma/codex
+* [Elisp Fakespace](https://github.com/skeeto/elisp-fakespace/)
+* [Codex](https://github.com/sigma/codex)
