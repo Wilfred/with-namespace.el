@@ -25,17 +25,20 @@ By producing code that many elisp developers would write anyway,
 about it.
 
 Todo
+===
 
 * Document
 * Explore importing from other namespaces (everything, public only, named only)
 
 Changelog
+===
 
 1.1 -- Added support for defmacro, defconst and defstruct, and
 allow more to be added by the user
 1.0 -- Initial release
 
 Similar projects
+===
 
 * https://github.com/skeeto/elisp-fakespace/
 * https://github.com/sigma/codex
