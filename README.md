@@ -33,9 +33,9 @@ Todo
 Changelog
 ===
 
-1.1 -- Added support for defmacro, defconst and defstruct, and
+* 1.1 -- Added support for defmacro, defconst and defstruct, and
 allow more to be added by the user
-1.0 -- Initial release
+* 1.0 -- Initial release
 
 Similar projects
 ===
