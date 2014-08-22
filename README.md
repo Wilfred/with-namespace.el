@@ -1,4 +1,5 @@
-with-namespace.el --- interoperable elisp namespaces
+with-namespace.el
+------------------
 
 Copyright (C) 2013 Wilfred Hughes
 
